@@ -39,3 +39,4 @@ new_york_city.csv
 
 ### Credits
 This project is part of Udacity's Nanodegree Program: Programming for Data Science with Python
+Data provided by Motivate: https://www.motivateco.com/
