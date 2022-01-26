@@ -9,18 +9,22 @@ The data provided by Motivate, a bike share system provider for many major citie
 
 ### Task
 Write code to compute and provide a variety of descriptive statistics concerning:
-#1 Popular times of travel
+
+##### Popular times of travel
     most common month
     most common day of week
     most common hour of day
-#2 Popular stations and trip
+
+##### Popular stations and trip
     most common start station
     most common end station
     most common trip (i.e., most frequent combination of start station and end station)
-#3 Trip duration
+
+##### Trip duration
     total travel time
     average travel time
-#4 User info
+
+##### User info
     counts of each user type
     counts of each gender (only available for NYC and Chicago)
     earliest, most recent, most common year of birth
