@@ -396,13 +396,13 @@ def main():
             print("\nPlease enter 'yes' if you agree to proceed with that selection:")
             while True:
                 restart = input('')
-                if restart.strip().lower() in ['yes', 'y', 'sure', 'agreed']:
+                if restart.strip().lower() in ['yes']:
                     break
-                elif restart.strip().lower() in ['no', 'n']:
+                elif restart.strip().lower() in ['no']:
                     break
                 else:
                     print("Sorry, that was unclear - please enter 'yes' to proceed or 'no' to restart.")
-            if restart.strip().lower() not in ['no', 'n']: #!= 'no':
+            if restart.strip().lower() not in ['no']: #!= 'no':
                 break
             else:
                 print("Very well - let's restart:")
