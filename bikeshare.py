@@ -121,23 +121,23 @@ def raw_data(df):
         print('-'*140)
         #print('Please enter the number of rows [1...1,000,000] you would like to see next, [y]es for the |default| option (5 rows) or [n]o to abort.')
         print('Would you like to proceed?')
-        print('Please enter the number of rows you would like to see next, [y]es for the |default| option (5 rows) or [n]o to abort.')
+        print('Please enter the number of rows you would like to see next, [yes] for the |default| option (5 rows) or [no] to abort.')
         while True:
             try:
                 x = str(input(''))
-                if not (x in ('y','n','df') or (int(x) > 0)): #(0 < int(x) <= 1000000)):
+                if not (x in ('yes','no','df') or (int(x) > 0)): #(0 < int(x) <= 1000000)):
                     raise ValueError
             except (ValueError, IndexError):
-                print("Invalid entry - Please enter a valid positive number, 'y' for yes or 'n' for no and hit [ENTER/RETURN].")
+                print("Invalid entry - Please enter a valid positive number, 'yes' or 'no' and hit [ENTER/RETURN].")
             else:
-                if x.strip().lower() == 'n':
+                if x.strip().lower() == 'no':
                     break
                 if x == 'df':
                     print(df)
-                    x = 'n'
+                    x = 'no'
                     break
                 else:
-                    if x == 'y':
+                    if x == 'yes':
                          x = 5
                     if r_list[-1] >= (limit-int(x)): #if row number selection exceeds remaining rows
                         if int(x) > limit - r_list[-1]:
@@ -147,13 +147,13 @@ def raw_data(df):
                         # show no of remaining rows from last row position to the last row of the table
                         print(df.iloc[r_list])
                         print('That displayed the last rows of the table!')
-                        x = 'n'
+                        x = 'no'
                         break
                     else:
                         n_list = list(range(int(x)))
                         r_list = [y + r_list[-1]+1 for y in n_list]
                         break
-        if x == 'n':
+        if x == 'no':
             break
     print('-'*60)
     input('[ENTER] to return to the selection menu.  ')
