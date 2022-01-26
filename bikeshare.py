@@ -8,13 +8,11 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 
 
 def get_filters():
-    """
-    Asks user to specify a city, month, and day to analyze.
-
-    Returns:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
+    """ Asks user to specify a city, month, and day to analyze.
+        Returns:
+            (str) city - name of the city to analyze
+            (str) month - name of the month to filter by, or "all" to apply no month filter
+            (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('-'*60)
     print('Hello! Let\'s explore some US bikeshare data!')
@@ -46,15 +44,13 @@ def get_filters():
 
 
 def load_data(city, month, day):
-    """
-    Loads data for the specified city and filters by month and day if applicable.
-
-    Args:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
-    Returns:
-        df - Pandas DataFrame containing city data filtered by month and day
+    """ Loads data for the specified city and filters by month and day if applicable.
+        Args:
+            (str) city - name of the city to analyze
+            (str) month - name of the month to filter by, or "all" to apply no month filter
+            (str) day - name of the day of week to filter by, or "all" to apply no day filter
+        Returns:
+            df - Pandas DataFrame containing city data filtered by month and day
     """
 
     # load data file into a dataframe
@@ -92,7 +88,9 @@ def load_data(city, month, day):
     return df
 
 def data_summary(df):
-    """Displays a short summary of the selected data/filtered dataframe."""
+    """Displays a short summary of the selected data/filtered dataframe.
+       Argument: df - Pandas DataFrame containing filtered or unfiltered dataset
+    """
 
     print('')
     print('-'*60)
@@ -103,8 +101,9 @@ def data_summary(df):
 
 ##
 def raw_data(df):
-    """Displays raw data table (unaltered imported data table after filtering).
-       Allows to scroll down by 5 new lines each or by a selected number of rows.
+    """ Displays raw data table (unaltered imported data table after filtering).
+        Allows to scroll down by 5 new lines each or by a selected number of rows.
+        Argument: df - Pandas DataFrame containing filtered or unfiltered city data
     """
 
     print('-'*60)
@@ -161,7 +160,9 @@ def raw_data(df):
 
 
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
+    """ Displays statistics on the most frequent times of travel.
+        Argument: df - Pandas DataFrame containing filtered or unfiltered dataset
+    """
 
     print('-'*60)
     print('\nCalculating The Most Frequent Times of Travel...\n')
@@ -194,7 +195,9 @@ def time_stats(df):
 
 
 def station_stats(df):
-    """Displays statistics on the most popular stations and trip."""
+    """ Displays statistics on the most popular stations and trip.
+        Argument: df - Pandas DataFrame containing filtered or unfiltered dataset
+    """
 
     print('-'*60)
     print('\nCalculating The Most Popular Stations and Trip...\n')
@@ -250,11 +253,10 @@ def station_stats(df):
 
 def ret_time(total, unit = 'hrs'):
     """ Converts time in seconds to units hours + minutes + second, returns those as a string variable. Function for the analysis part regarding time duration.
-
-    Arg:    total ... time in seconds
-            unit .. a secondary argument defining the output
-            (default = 'hrs', other option: 'min')
-    Return: a string variable indicating converted input as hrs + mins + secs
+        Arg:    total ... time in seconds
+                unit .. a secondary argument defining the output
+                    (default = 'hrs', other option: 'min')
+        Return: a string variable indicating converted input as hrs + mins + secs
     """
     if unit == 'hrs':   # will return result as hours + minutes + seconds
         hr = total // (60*60)
@@ -269,7 +271,9 @@ def ret_time(total, unit = 'hrs'):
     return msg
 
 def trip_duration_stats(df):
-    """Displays statistics on the total and average trip duration."""
+    """ Displays statistics on the total and average trip duration.
+        Argument: df - Pandas DataFrame containing filtered or unfiltered dataset
+    """
 
     print('-'*60)
     print('\nCalculating Trip Duration...\n')
@@ -294,7 +298,9 @@ def trip_duration_stats(df):
 
 
 def user_stats(df):
-    """Displays statistics on bikeshare users."""
+    """ Displays statistics on bikeshare users.
+        Argument: df - Pandas DataFrame containing filtered or unfiltered dataset
+    """
 
     print('-'*60)
     print('\nCalculating User Stats...\n')
@@ -339,10 +345,10 @@ def user_query(city, month, day):
         a) presents current data selection according to passed arguments
         b) queries the user's choice for data access.
 
-    Arguments: city, month, day
+        Arguments: city, month, day
 
-    Returns: a single string variable with one of the following values:
-    'summary', 'raw', 'time', 'station', 'trip', 'user', 'restart', or 'exit'.
+        Returns: a single string variable with one of the following values:
+        'summary', 'raw', 'time', 'station', 'trip', 'user', 'restart', or 'exit'.
     """
     msg_main = "You can access bike sharing data in {} for {} in {} 2017."
     if city != 'all':
