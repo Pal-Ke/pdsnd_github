@@ -5,6 +5,27 @@ January 26 - 2022
 
 ### Description
 Python is used to explore and understand US bikeshare data.
+The data provided by Motivate, a bike share system provider for many major cities in the United States, will be analyzed to uncover bike share usage patterns. Bike share system usage between three large cities (Chicago, New York City, and Washington, DC) is compared in this project.
+
+### Task
+Write code to compute and provide a variety of descriptive statistics concerning:
+#1 Popular times of travel
+    most common month
+    most common day of week
+    most common hour of day
+#2 Popular stations and trip
+    most common start station
+    most common end station
+    most common trip (i.e., most frequent combination of start station and end station)
+#3 Trip duration
+    total travel time
+    average travel time
+#4 User info
+    counts of each user type
+    counts of each gender (only available for NYC and Chicago)
+    earliest, most recent, most common year of birth
+
+(please note that info on gender and year of birth are only available for NYC and Chicago)
 
 ### Files used
 bikeshare.py
